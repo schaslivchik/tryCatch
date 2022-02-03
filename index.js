@@ -22,7 +22,11 @@ function pow(base, exponent) {
 
 
 try {
-  console.log('object :>> ', pow(-2, 2));
+  console.log('object :>> ', pow(2, -2));
 } catch(error){
-  console.log('e :>> ', error);
+  if(error instanceof TypeError){
+    console.log(error);
+  }else if(error instanceof Error) {
+    console.log(error)
+  }
 }
